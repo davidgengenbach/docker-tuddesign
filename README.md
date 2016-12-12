@@ -7,19 +7,40 @@ Instead of downloading `TexMaker`/`TexLife`/..., getting frustated with the inst
 ### Installation
 Install [Docker](https://www.docker.com/)
 ```shell
-./download-design.sh # or from here: http://exp1.fkp.physik.tu-darmstadt.de/tuddesign/andere.html#andere
-./build.sh
+# Download the design (or download it manually from http://exp1.fkp.physik.tu-darmstadt.de/tuddesign/andere.html#andere)
+./scripts/host/download-design.sh
+# Build the container
+# (Unfortunately the image has to be built, because the TUD design is not public, so I can't upload it)
+./scripts/host/build.sh
 ```
 
 ### Generate pdf
 ```shell
-./run.sh bash
-# This will open a bash terminal in the docker container.
-# It will also mount this folder to "/workspace" in the docker container.
-# So this readme here will be under "/workspace/README.md".
+# Put your FILE.tex file that you want to compile into the "workspace" folder
+
+# Open a terminal in the docker container:
+./scripts/host/terminal.sh
+# (This will mount the "workspace" folder in this repo to "/workspace" in the docker container)
+
+# Now change to the workspace inside the docker container
+cd /workspace
+
 # The command to start compiling the latex is:
 pdflatex --interaction=nonstopmode FILE.tex
+# Twice to update the ToC (why? I really don't know or care)
+pdflatex --interaction=nonstopmode FILE.tex
+
+# Now your pdf is in the same folder (in the "workspace" folder on your host/container)
+# (There are a lot of other files in the same folder as well (FILE.log, FILE.aux, ...))
+
+```
+or
+```shell
+./scripts/host/compile.sh FILE.text FILE.pdf
+# FILE.pdf is the same PDF, but you can't see the logs and so on
 ```
 
+Congratulations! You successfully downloaded a lot of stuff and used _cutting-edge_ technology to generate a PDF that looks like the CI of your university. Talk about wasting resources :smile:
+
 ## Acknowledgment
-The base docker image is [narf/latex](https://hub.docker.com/r/narf/latex/).
+The base docker image and the `scripts/container/compile.sh` script in particular are from [narf/latex](https://hub.docker.com/r/narf/latex/).
