@@ -37,7 +37,8 @@ pdflatex --interaction=nonstopmode FILE.tex
 or
 ```shell
 ./scripts/host/compile.sh FILE.text FILE.pdf
-# FILE.pdf is the same PDF, but you can't see the logs and so on
+# FILE.pdf is the generated PDF
+# (you can't see the logs and so on with this approach)
 ```
 
 Congratulations! You successfully downloaded a lot of stuff and used _cutting-edge_ technology to generate a PDF that looks like the CI of your university. Talk about wasting resources :smile:
