@@ -36,7 +36,7 @@ pdflatex --interaction=nonstopmode FILE.tex
 ```
 or
 ```shell
-./scripts/host/compile.sh FILE.text FILE.pdf
+./scripts/host/compile.sh FILE.tex FILE.pdf
 # FILE.pdf is the generated PDF
 # (you can't see the logs and so on with this approach)
 ```
