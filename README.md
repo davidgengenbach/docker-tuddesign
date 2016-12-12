@@ -13,10 +13,8 @@ Install [Docker](https://www.docker.com/)
 
 ### Generate pdf
 ```shell
-docker run -i tudlatex < FILE.tex > FILE.pdf
-# or
-./run.sh
-# This will open a bash terminal if you want to do it yourself.
+./run.sh bash
+# This will open a bash terminal in the docker container.
 # It will also mount this folder to "/workspace" in the docker container.
 # So this readme here will be under "/workspace/README.md".
 # The command to start compiling the latex is:

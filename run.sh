@@ -1,3 +1,5 @@
 #!/usr/bin/env sh
 
-docker run -it -v $(pwd):/workspace tudlatex bash
+CMD="$1"
+
+docker run -it -v $(pwd):/workspace tudlatex "$CMD"
