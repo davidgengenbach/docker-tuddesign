@@ -53,3 +53,6 @@ Congratulations! You successfully downloaded a lot of stuff and used _cutting-ed
 
 ## Acknowledgment
 The base docker image and the `scripts/container/compile.sh` script in particular are from [narf/latex](https://hub.docker.com/r/narf/latex/).
+
+## Thanks
+Thanks to Steffen P. for the suggestion to add the recompile-on-change feature.
