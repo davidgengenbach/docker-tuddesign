@@ -1,5 +1,5 @@
 design.zip
 fonts.zip
 tuddesign/
-workspace/example/*
+workspace/
 !workspace/example/example.tex

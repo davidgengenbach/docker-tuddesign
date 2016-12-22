@@ -18,4 +18,4 @@ check_parameter() {
 check_parameter $TEX_IN_FILE
 check_parameter $PDF_OUT
 
-docker run -i $TAG /compile.sh < $TEX_IN_FILE > $PDF_OUT
+docker run --interactive $TAG /compile.sh < $TEX_IN_FILE > $PDF_OUT

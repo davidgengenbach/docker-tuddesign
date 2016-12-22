@@ -17,8 +17,8 @@ exit_if_folder_nonexistent() {
 exit_if_folder_nonexistent $DIR_DESIGN
 exit_if_folder_nonexistent $DIR_FONTS
 
-echo "Removing old docker image"
-docker rmi --force tudlatex
+#echo "Removing old docker image"
+#docker rmi --force tudlatex
 
 echo "Building new docker image"
-docker build . -t $TAG
+docker build . --tag $TAG --rm
