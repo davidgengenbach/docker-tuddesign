@@ -1,3 +1,9 @@
+# UPDATE!
+
+There is an up-to-date template called [LaTeX@TUDa](https://www.ce.tu-darmstadt.de/ce/latex_tuda/index.de.jsp) available which makes installation quite easy and should be used instead of the older version used in this project!
+
+:pencil: The new template is also very easy to integrate into Overleaf, if needed.
+
 # Why
 Instead of downloading `TexMaker`/`TexLive`/..., getting frustated with the installation, learning all the words needed to install fonts for `latex`, cluttering your precious filesystem with GBs of latex-specific data you don't understand, you can just do the steps below and you have a working machine to compile [TUD Design](http://exp1.fkp.physik.tu-darmstadt.de/tuddesign/)-LaTeX-documents in an instant (not really, it has to download a lot of stuff at the beginning, but you'd have to install a lot of stuff anyway, so... "Einen Tod muss man sterben").
 
